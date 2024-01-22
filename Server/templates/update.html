@@ -1,0 +1,13 @@
+<div style="text-align: center; height:100vh; background: linear-gradient(180deg, rgb(237, 246, 240) 0%, rgba(200, 217, 234) 30%, rgb(213, 192, 247) 60%)">
+    <div style="display:flex; justify-content: center; align-items: center; flex-direction: column; ">
+        <h2>Update a Todo</h2>
+        
+        <form action="/todo/{{todo.todoId}}" method="POST" style="text-align: center; display:flex; flex-direction: column;" >
+            <input name="todoTitle" value="{{todo.todoTitle}}" placeholder="Title" style="padding: 5px; width: 400px" type="text" >
+            <input name="tag" value="{{todo.tag}}" placeholder="Tag" style="padding: 5px; width: 400px" type="text">    
+            <button style="padding: 5px;">SAVE</button>
+        </form>
+    
+    </div>
+</div>
+<!-- request.form[toma lo que hay en input name en este caso request.form[todoTitle] name='todoTitle', sino tendria que ser name='title' request.form[title] ] -->

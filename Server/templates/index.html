@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo ApiRest</title>
+</head>
+<div style="text-align: center; height:100vh; background: linear-gradient(180deg, rgb(237, 246, 240) 0%, rgba(200, 217, 234) 30%, rgb(213, 192, 247) 60%)">
+    <h1>Welcome you to my Todos API!!</h1>
+    <p>API HOST: <script>document.write('<input style="padding: 5px; width: 300px" type="text" value="'+window.location.href+'" />');</script></p>
+
+    <div style="display:flex; justify-content: center; align-items: center; flex-direction: column; ">
+        
+        {% with messages = get_flashed_messages() %}
+
+        {% if messages %}
+            {% for message in messages %}
+                <div class="bg-warning">
+                    {{message}}
+                </div>    
+            {% endfor %}
+        {% endif %}
+
+    {% endwith %}
+
+        
+        <h2>Save your Todos</h2>
+
+
+        <form style="text-align: center; display:flex; flex-direction: column;" action="/addTodo" method="POST">
+           
+            <input style="padding: 5px; width: 400px" type="text" name="todoTitle" placeholder="Title">
+            <input style="padding: 5px; width: 400px" type="text" name="tag" placeholder="Tag">    
+           
+            <button style="padding: 5px;">SAVE</button>
+        </form>
+
+
+        <div style="padding: 5px; display: flex; ">
+            {% for todo in todos %}
+
+            <div style="padding: 15px; border: 1px solid rgb(68, 101, 141) ; border-radius: 20px; margin: 2px; ">
+                <div><h5>{{todo.todoTitle}}</h5></div>
+                <div><small>{{todo.tag}}</small></div>
+                <div>
+                    <a href="{{ url_for('todos.update_todo', todoId=todo.todoId) }}">update</a>
+                    <a href="{{ url_for('todos.delete_todo', todoId=todo.todoId) }}">delete</a>
+                </div>
+            </div>
+
+            {% endfor %}
+
+        </div>
+    </div>
+</div>
+</body>
+</html>

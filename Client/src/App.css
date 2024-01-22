@@ -1,0 +1,110 @@
+#root {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+/* body{
+  background-color: rgb(65, 64, 64);
+  color: aliceblue;
+} */
+.wrapper{
+  width: fit-content;
+  height: 80%;
+  box-shadow: 8px 13px 19px -3px rgba(0,0,0,0.55)!important;
+
+}
+.my-card {
+  padding: 2em;
+}
+.bg-light.bg-gradient{
+  background: linear-gradient(180deg, rgb(237, 246, 240) 0%, rgb(189, 215, 242) 30%, rgb(196, 188, 251) 92%, rgb(237, 246, 240) 100%)!important;
+  box-shadow: 8px 13px 19px -3px rgba(0,0,0,0.55);
+  /* background: linear-gradient(to top, #eef2f3, #cedeea, #eef2f3) !important; W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  color: rgb(54, 55, 57);
+}
+.card{
+  background: rgb(241, 245, 250)!important;
+
+}
+.TodoCard{
+  height: fit-content;
+  background: rgb(241, 245, 250)!important;
+
+}
+.actionButtons{
+  display: flex;
+}
+.side-bar-add-task{
+  border-radius: 10%!important;
+}
+.tagBtnDiv button{
+  background: rgb(241, 245, 250)!important;
+  max-width: 6rem;
+  min-width: 6rem;
+  max-height: 6rem;
+  min-height: 6rem;
+  padding-left: 0;
+  padding-right: 0;
+
+}
+.ActiveIcon{
+  color: rgb(31, 171, 31);
+}
+.hidden{
+  display: none;
+}
+.todo-list{
+  height: 250px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+/* custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  box-shadow: inset 1px 0px 5px rgb(255, 255, 255); 
+  border-radius: 10px;}
+::-webkit-scrollbar-thumb {
+  background: #a6a6fc; 
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #9999f9; 
+}
+/* .todo-form{
+} 
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+
+
+.read-the-docs {
+  color: #888;
+} */
