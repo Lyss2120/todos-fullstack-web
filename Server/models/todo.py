@@ -13,4 +13,15 @@ class Todo(db.Model):
         self.done = done
         self.archived = archived
         self.tag = tag
-        # return f"<Todo title {self.todoTitle}>"
+        return self.todoTitle
+
+    def serialize(self):
+                return {
+                    "todoId": self.todoId,
+                    "todoTitle": self.todoTitle,
+                    "done": self.done,
+                    "archived": self.archived,
+                    "tag": self.tag,
+                    # do not serialize the password, its a security breach
+                }        
+            
