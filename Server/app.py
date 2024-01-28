@@ -13,10 +13,5 @@ db.init_app(app)
 
 app.register_blueprint(todos)
 
-# buscar como iniciar venv y probar link backend en url buscador ...ruta env src c windows win 32 etc
-# 26-01 el entorno virtual esta creado en la carpeta server, para activarlo usar el comando venv\Scripts\activate
+# activar venv ==>   venv\Scripts\activate.bat 
 
-# this only runs if `$ python app.py` is executed
-# if __name__ == "__main__":
-#     # PORT = int(os.environ.get('PORT', 3001))
-#     app.run(host="0.0.0.0", port="3001", debug=True)

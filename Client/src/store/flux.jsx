@@ -125,7 +125,32 @@ const getState = ({ getStore, getActions, setStore }) => {
 				getActions().changeColor(0, "green");
 			},
 
-			getMessage: async () => {
+			// getMessage: async () => {
+			// 	try {
+			// 		// fetching data from the backend
+			// 		const resp = await fetch(process.env.BACKEND_URL + "/api/hello")
+			// 		const data = await resp.json()
+			// 		setStore({ message: data.message })
+			// 		// don't forget to return something, that is how the async resolves
+			// 		return data;
+			// 	} catch (error) {
+			// 		console.log("Error loading message from backend", error)
+			// 	}
+			// },
+			
+			getAllTodos: async () => {
+				try {
+					// fetching data from the backend
+					const resp = await fetch(process.env.BACKEND_URL + "/api/hello")
+					const data = await resp.json()
+					setStore({ message: data.message })
+					// don't forget to return something, that is how the async resolves
+					return data;
+				} catch (error) {
+					console.log("Error loading message from backend", error)
+				}
+			},
+			getOneTodo: async () => {
 				try {
 					// fetching data from the backend
 					const resp = await fetch(process.env.BACKEND_URL + "/api/hello")
@@ -138,42 +163,61 @@ const getState = ({ getStore, getActions, setStore }) => {
 				}
 			},
 
-			getTodos: () => {
-				console.log('getTodos', id);
-
+			deleteTodo: async () => {
+				try {
+					// fetching data from the backend
+					const resp = await fetch(process.env.BACKEND_URL + "/api/hello")
+					const data = await resp.json()
+					setStore({ message: data.message })
+					// don't forget to return something, that is how the async resolves
+					return data;
+				} catch (error) {
+					console.log("Error loading message from backend", error)
+				}
 			},
-			getOneTodo: (id) => {
-				console.log('getOneTodo', id);
 
+			updateteTodo: async () => {
+				try {
+					// fetching data from the backend
+					const resp = await fetch(process.env.BACKEND_URL + "/api/hello")
+					const data = await resp.json()
+					setStore({ message: data.message })
+					// don't forget to return something, that is how the async resolves
+					return data;
+				} catch (error) {
+					console.log("Error loading message from backend", error)
+				}
 			},
-			addTodo: (todo) => {
-				console.log('addTodo', todo);
 
+			addTodo: async () => {
+				try {
+					// fetching data from the backend
+					const resp = await fetch(process.env.BACKEND_URL + "/api/hello")
+					const data = await resp.json()
+					setStore({ message: data.message })
+					// don't forget to return something, that is how the async resolves
+					return data;
+				} catch (error) {
+					console.log("Error loading message from backend", error)
+				}
 			},
+
 			addTag: (id) => {
 				console.log('addTag', id);
 
 			},
+
 			handleSubmit: () => {
 				const store = getStore();
 				// const [...store.inputValue]= newInputValue
-				console.log('archiveTodoById');
-
+				console.log('handlesubmit');
 				setStore({ todos: [...store.todos, newInputValue] });
 			},
-			deleteTodoById: (todo, id) => {
-				console.log('archiveTodoById', todo, id);
 
-			},
-			updateTodoById: (todo, id) => {
-				console.log('archiveTodoById', todo, id);
-
-			},
 			archiveTodoById: (todo, id) => {
 				// const store = getStore();
 				console.log('archiveTodoById', todo, id);
 				// setStore({ demo: demo });
-
 			}
 
 		}
